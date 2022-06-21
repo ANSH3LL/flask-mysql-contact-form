@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e3e3;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #111827;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.viewport {
+    width: 40%;
+    margin: auto;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: none;
+    outline: none;
+    color: #111827;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    padding: 7px 5px 7px 5px;
+    transition: 0.4s ease-in-out;
+    background-color: transparent;
+    border-bottom: 3px solid #a882f1;
+    font-family: 'Raleway', sans-serif;
+}
+
+textarea {
+    resize: none;
+    border: none;
+    outline: none;
+    color: #111827;
+    padding: 7px 5px 7px 5px;
+    transition: 0.4s ease-in-out;
+    background-color: transparent;
+    border-bottom: 3px solid #a882f1;
+    font-family: 'Raleway', sans-serif;
+}
+
+input:focus, textarea:focus {
+    border-bottom: 3px solid #6f23ff;
+}
+
+.send {
+    width: 100%;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 22px;
+    line-height: 20px;
+    border-radius: 6px;
+    background-color: #8753eb;
+    padding: 8px 16px 8px 16px;
+    transition: 0.4s ease-in-out;
+    font-family: 'Raleway', sans-serif;
+}
+
+button:hover {
+    background-color: #6f23ff;
+}
+
+.message-container {
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: #f1f1f1;
+    padding: 18px 16px 2px 16px;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.message-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+p, span {
+    font-family: 'Raleway', sans-serif;
+}
+
+.name-tag {
+    font-weight: 600;
+    margin-right: 3px;
+}
+
+.email-tag {
+    color: #9364ec;
+    font-weight: 400;
+    transition: 0.4s ease-in-out;
+}
+
+.email-tag:hover {
+    color: #6f23ff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.delete {
+    float: right;
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    margin-right: 1px;
+    border-radius: 3px;
+    background-color: #ff5959;
+    padding: 1px 5px 1px 5px;
+    transition: 0.4s ease-in-out;
+    font-family: 'Raleway', sans-serif;
+}
+
+.delete:hover {
+    background-color: #ff0000;
+}

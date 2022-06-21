@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }} />
+
+    <script src={{ url_for('static', filename='jquery.min.js') }}></script>
+
+    <script src={{ url_for('static', filename='jquery.modal.min.js') }}></script>
+    <link rel="stylesheet" href={{ url_for('static', filename='jquery.modal.min.css') }} />
+
+    <title>Contact Us</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div id="ex0" class="modal">
+                    <p style="margin: auto;">{{ message }}</p>
+                </div>
+                <script type="text/javascript">$('#ex0').modal();</script>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div class="page">
+        <div class="content">
+            <h2>Send us a message</h2>
+            <form class="viewport" action="/addmessage" method="POST">
+                <div class="form-content">
+                    <input name="name" type="text" placeholder="Name" required />
+                    <input name="email" type="email" placeholder="Email address" required />
+                    <textarea name="message" placeholder="Your message..." rows=5 maxlength=512 required></textarea>
+                </div>
+                <button class="send" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
